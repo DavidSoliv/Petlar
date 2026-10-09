@@ -1,0 +1,1 @@
+Coloque aqui o arquivo de vídeo de cães e gatos, nomeando-o pets-demo.mp4. O banner já possui uma imagem alternativa caso o vídeo não esteja disponível.

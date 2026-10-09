@@ -1,0 +1,23 @@
+.org-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 22px 0
+}
+
+.org-tabs a {
+    padding: 10px 16px;
+    border-radius: 99px;
+    background: white;
+    border: 1px solid #dbe7df;
+    font-weight: 700;
+    font-size: .88rem
+}
+
+.review-demo {
+    border-left: 3px solid var(--coral);
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 0 12px 12px 0;
+    margin: 10px 0
+}

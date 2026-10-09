@@ -1,0 +1,35 @@
+/* SISTEMA ÚNICO DE ÍCONES DO PETLAR
+   Todos os ícones vetoriais seguem o mesmo traço, proporção e alinhamento.
+   Para trocar um ícone, substitua apenas o SVG, mantendo a classe do elemento. */
+:where(.icon-btn, .category, .search-bar, .filter-row, .pet-card, .org-card,
+       .brand-mark, .mobile-bottom, .access-tools, .detail-actions, .section-head) svg {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+:where(.icon-btn, .category, .search-bar, .filter-row, .pet-card, .org-card,
+       .brand-mark, .mobile-bottom, .access-tools, .detail-actions, .section-head) svg * {
+  vector-effect: non-scaling-stroke;
+}
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; }
+.category { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; }
+.search-bar > svg { color: var(--green, #174e46); }
+.mobile-bottom svg { width: 1.35rem; height: 1.35rem; }
+.brand-mark svg { width: 1.7rem; height: 1.7rem; }
+/* Botões sem SVG também usam a mesma área visual dos ícones. */
+.icon-btn, .access-tools button { line-height: 1; }
+
+
+/* AJUSTE: ícones da navegação inferior menores e mais equilibrados */
+.mobile-bottom a svg { width: 17px; height: 17px; stroke-width: 1.7; }
+.mobile-bottom a { gap: 3px; }
+.mobile-bottom a:nth-child(3) svg { width: 16px; height: 16px; }
+
+/* Ícones das categorias com proporção uniforme */
+.category svg { width: 25px; height: 25px; stroke-width: 1.65; }
+.brand-mark svg { width: 27px; height: 27px; stroke-width: 1.7; }
+.favorite svg { width: 17px; height: 17px; stroke-width: 1.7; }

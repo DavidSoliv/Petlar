@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174e46"><title>Acessar o PetLar</title>
+  <link rel="stylesheet" href="css/global.css"><link rel="stylesheet" href="css/icones.css"><link rel="stylesheet" href="css/autenticacao.css">
+</head>
+<body class="auth-page">
+  <a class="skip-link sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="PetLar, início">PetLar</a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="animais.html">Encontrar pets</a><a href="ongs.html">ONGs</a><a href="como-funciona.html">Como funciona</a></nav>
+    <a class="btn btn-outline" href="cadastro.html">Criar conta</a>
+  </div></header>
+  <main id="conteudo" class="auth-main"><div class="container auth-shell">
+    <section class="auth-welcome"><div class="auth-welcome-copy"><span class="eyebrow">Um lar começa com um encontro</span><h1>Mais carinho, menos distância.</h1><p>Encontre seu novo melhor amigo e acompanhe sua jornada de adoção em um só lugar.</p><a class="btn btn-light" href="animais.html">Conhecer os pets <span aria-hidden="true">→</span></a></div><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=85" alt="Cachorro feliz olhando para a câmera"></section>
+    <section class="auth-panel"><a class="auth-back" href="index.html">← Voltar ao início</a><span class="auth-kicker">Bem-vindo de volta</span><h2>Entre na sua conta</h2><p class="auth-intro">Acesse para encontrar seu novo melhor amigo, cadastrar um pet ou conversar com quem está cuidando dele.</p>
+      <form id="login-form" class="auth-form"><label for="login-email">E-mail</label><input id="login-email" type="email" placeholder="seuemail@gmail.com" autocomplete="username" required><label for="login-password">Senha</label><div class="password-wrap"><input id="login-password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required><button type="button" data-toggle-password="login-password"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div><p id="login-message" class="form-error" aria-live="polite"></p><button class="btn btn-green auth-primary" type="submit">Entrar na conta →</button></form>
+      <p class="auth-signup">Ainda não tem conta? <a href="cadastro.html"><strong>Cadastre-se</strong></a></p><div class="auth-divider"><span>ou</span></div><a class="btn btn-outline auth-primary" href="cadastro.html">Criar uma conta</a>
+    </section>
+  </div></main>
+  <script defer src="js/global.js"></script><script defer src="js/autenticacao.js"></script>
+<script defer src="js/acesso.js"></script></body></html>

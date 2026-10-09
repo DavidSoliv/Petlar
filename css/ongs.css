@@ -1,0 +1,18 @@
+.org-grid.listing {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+.org-card.large {
+    padding: 22px
+}
+
+.org-card.large img {
+    width: 86px;
+    height: 86px
+}
+
+@media(max-width:760px) {
+    .org-grid.listing {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}

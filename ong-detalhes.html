@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174e46">
+    <meta name="description" content="Encontre seu novo melhor amigo no PetLar.">
+    <title>Perfil da ONG | PetLar</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/icones.css">
+    <link rel="stylesheet" href="css/ong-detalhes.css">
+    <script>
+        /* PETLAR_GUARD: exigir login antes de exibir qualquer página interna */
+        if (!localStorage.getItem('petlar-sessao')) {
+            var p = location.pathname.split('/').pop() || 'index.html';
+            location.replace('login.html?next=' + encodeURIComponent(p + location.search + location.hash));
+        }
+    </script>
+</head>
+
+<body><a class="skip-link sr-only" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container nav-wrap"><a class="brand" href="index.html" aria-label="PetLar, início">PetLar</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+            <nav class="main-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="animais.html">Animais</a><a href="ongs.html">ONGs</a><a href="como-funciona.html">Como funciona</a><a href="sobre.html">Sobre nós</a><a href="chat.html">Chat</a></nav>
+            <div class="nav-actions"><a class="icon-btn desktop-only" href="animais.html" aria-label="Pesquisar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg></a>
+                <a class="icon-btn desktop-only" href="favoritos.html" aria-label="Favoritos"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg></a>
+                <a class="icon-btn desktop-only" href="perfil.html" aria-label="Perfil"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></a>
+                <a
+                    class="btn btn-green" href="login.html">Entrar</a>
+            </div>
+        </div>
+    </header>
+    <main id="conteudo">
+        <section class="section">
+            <div class="container" id="ong-detail">
+                <p>Carregando perfil da ONG...</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="card form-content" style="max-width:760px;margin:auto"><span class="eyebrow">Sua experiência importa</span>
+                    <h2>Avaliar esta ONG</h2>
+                    <p>Depois de uma adoção, conte como foi sua experiência para ajudar outras famílias.</p>
+                    <form id="review-form">
+                        <div class="field"><label for="review-stars">Sua avaliação</label><select id="review-stars" required><option value="">Escolha uma nota</option><option value="5">★★★★★ — Amei</option><option value="4">★★★★☆ — Muito boa</option><option value="3">★★★☆☆ — Boa</option><option value="2">★★☆☆☆ — Pode melhorar</option><option value="1">★☆☆☆☆ — Ruim</option></select></div>
+                        <div class="field"><label for="review-text">Comentário</label><textarea id="review-text" rows="3" required placeholder="Conte como foi sua experiência..."></textarea></div><button class="btn btn-green" type="submit">Enviar avaliação</button>
+                        <p id="review-message" aria-live="polite"></p>
+                    </form>
+                    <div id="review-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a class="brand" href="index.html" style="color:white">PetLar</a>
+                    <p>Adotar é um ato de amor. Conexões que transformam vidas, uma patinha de cada vez.</p>
+                </div>
+                <div>
+                    <h3>Links rápidos</h3>
+                    <div class="footer-links"><a href="animais.html">Encontrar um pet</a><a href="ongs.html">Conhecer ONGs</a><a href="como-funciona.html">Como funciona</a><a href="sobre.html">Sobre nós</a><a href="contato.html">Contato</a></div>
+                </div>
+                <div>
+                    <h3>Contato</h3>
+                    <p>contato@petlar.org.br</p>
+                    <p>São Paulo, SP — Brasil</p>
+                </div>
+                <div>
+                    <h3>Receba novidades</h3>
+                    <p>Novas histórias e pets esperando por um lar.</p>
+                    <form class="newsletter" data-newsletter><label class="sr-only" for="newsletter-email">Seu e-mail</label><input id="newsletter-email" type="email" placeholder="Seu e-mail" required><button aria-label="Cadastrar e-mail">→</button></form>
+                    <p class="newsletter-message" aria-live="polite"></p>
+                </div>
+            </div>
+            <div class="copyright"><span>© 2026 PetLar. Todos os direitos reservados.</span><span>Juntos por um mundo melhor para os animais.</span></div>
+        </div>
+    </footer>
+    <nav class="mobile-bottom" aria-label="Atalhos"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg>Início</a>
+        <a href="animais.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 5 4 3 3 9c-.3 2 1 3.5 3 4l1 5c.3 1.5 1.5 2.5 3 2.5h4c1.5 0 2.7-1 3-2.5l1-5c2-.5 3.3-2 3-4l-1-6-3 2"/><path d="M8 10h.01M16 10h.01M9 14c1.8 1.4 4.2 1.4 6 0"/></svg>Adotar</a>
+        <a href="favoritos.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg>Favoritos</a>
+        <a href="cadastrar-animal.html">＋<span>Publicar</span></a><a href="perfil.html"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a></nav>
+    <div class="access-tools" aria-label="Acessibilidade"><button data-font="up" aria-label="Aumentar texto">A+</button><button data-font="down" aria-label="Diminuir texto">A−</button><button data-motion aria-label="Reduzir movimento"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg></button></div>
+    <script defer src="js/dados.js"></script>
+    <script defer src="js/global.js"></script>
+    <script defer src="js/ong-detalhes.js"></script>
+    <script defer src="js/acesso.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const id = new URLSearchParams(location.search).get('id') || 'ong';
+            const key = 'petlar-avaliacoes-' + id;
+            const list = document.getElementById('review-list');
+            const render = () => {
+                let rows = [];
+                try {
+                    rows = JSON.parse(localStorage.getItem(key) || '[]')
+                } catch (_) {}
+                list.innerHTML = rows.map(r => `<article style="border-top:1px solid #e5e7eb;padding:1rem 0"><strong>${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</strong><p>${r.text.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}</p></article>`).join('')
+            };
+            render();
+            document.getElementById('review-form') ? .addEventListener('submit', e => {
+                e.preventDefault();
+                const stars = Number(document.getElementById('review-stars').value),
+                    text = document.getElementById('review-text').value.trim();
+                if (!stars || !text) return;
+                let rows = [];
+                try {
+                    rows = JSON.parse(localStorage.getItem(key) || '[]')
+                } catch (_) {}
+                rows.unshift({
+                    stars,
+                    text,
+                    date: new Date().toISOString()
+                });
+                localStorage.setItem(key, JSON.stringify(rows));
+                document.getElementById('review-message').textContent = 'Obrigada pela avaliação!';
+                e.target.reset();
+                render()
+            })
+        });
+    </script>
+</body>
+
+</html>
